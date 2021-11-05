@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Edit User</title>
+</head>
+<h1>Edit User {{user.id}}</h1>
+<body>
+    <div class="container">
+        <h1>Add User</h1>
+        <br>
+        <form action="/users/{{user.id}}/update" method="post">
+            <label for="first_name">First Name:</label><br>
+            <input type="text" name="first_name" value="{{user.first_name}}"><br>
+            <label for="last_name">Last Name:</label><br>
+            <input type="text" name="last_name" value="{{user.last_name}}"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" value="{{user.email}}"><br><br>
+            <button type="submit" class="btn btn-primary">Update User</button><br>
+            <a href="/users/{{user.id}}"></a>
+        </form>
+    </div>
+</body>
+</html>
